@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Смешные новости и мемы</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f2f2f2;
+        }
+        header {
+            background: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .content {
+            padding: 1rem;
+        }
+        .post {
+            background: white;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .ad-banner {
+            background: #ddd;
+            padding: 2rem;
+            text-align: center;
+            margin: 1rem 0;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Смешные новости и мемы</h1>
+</header>
+
+<div class="content" id="posts">
+    <div class="post">😂 Новость: Кот украл еду у собаки и стал героем дня!</div>
+    <div class="ad-banner">Здесь будет ваша реклама</div>
+    <div class="post">🤣 Мем дня: "Когда работаешь из дома, а кошка твой босс."</div>
+</div>
+
+<div style="text-align: center;">
+    <button onclick="loadMore()">Показать ещё</button>
+</div>
+
+<script>
+function loadMore() {
+    const posts = document.getElementById('posts');
+    const newPost = document.createElement('div');
+    newPost.className = 'post';
+    newPost.innerText = "🤪 Новая шутка: Почему программисты любят кофе? Потому что без Java они не могут работать!";
+    posts.appendChild(newPost);
+}
+</script>
+
+</body>
+</html>
